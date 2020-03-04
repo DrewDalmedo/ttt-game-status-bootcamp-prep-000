@@ -97,5 +97,10 @@ def over?(board)
 end
 
 def winner(board)
-
+  winning_coords = win?(board)
+  if (board[ winning_coords[0] ] == "X")
+    return "X"
+  else
+    return "O"
+  end
 end
