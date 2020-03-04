@@ -91,10 +91,12 @@ end
 
 def winner(board)
   winning_coords = won?(board)
-  if    (board[ winning_coords[0] ] == "X")
-    return "X"
-  elsif (board[ winning_coords[0] ] == "O")
-    return "O"
+  if winning_coords != nil
+    if    (board[ winning_coords[0] ] == "X")
+      return "X"
+    elsif (board[ winning_coords[0] ] == "O")
+      return "O"
+    end
   end
 
   return nil
