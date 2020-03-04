@@ -17,13 +17,6 @@ WIN_COMBINATIONS = [
   [2, 4, 6]  # diagonal last row
 ]
 
-
-int[] i = [1, 2, 3, 4];
-for (int e: i) {
-  println(e);
-}
-
-
 def win?(board)
   '''
   for each win_combination in WIN_COMBINATIONS
