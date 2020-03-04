@@ -90,7 +90,10 @@ def draw?(board)
 end
 
 def over?(board)
-
+  if (win?(board) && full?(board) && draw?(board))
+    return true
+  end
+  return false
 end
 
 def winner(board)
