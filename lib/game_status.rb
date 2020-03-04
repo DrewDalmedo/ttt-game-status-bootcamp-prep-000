@@ -62,7 +62,7 @@ def win?(board)
       false
     end
   end
-  
+
   return nil
 end
 
