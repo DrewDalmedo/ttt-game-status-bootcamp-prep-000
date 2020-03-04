@@ -91,9 +91,9 @@ end
 
 def winner(board)
   winning_coords = won?(board)
-  if (board[ winning_coords[0] ] == "X")
+  if    (board[ winning_coords[0] ] == "X")
     return "X"
-  else
+  elsif (board[ winning_coords[0] ] == "O")
     return "O"
   end
 
