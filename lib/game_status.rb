@@ -17,7 +17,7 @@ WIN_COMBINATIONS = [
   [2, 4, 6]  # diagonal last row
 ]
 
-def win?(board)
+def won?(board)
   '''
   for each win_combination in WIN_COMBINATIONS
     # win_combination is a 3 element array of indexes that compose a win, [0,1,2]
@@ -75,7 +75,7 @@ def full?(board)
 end
 
 def draw?(board)
-  if (full?(board) && !(win?(board)))
+  if (full?(board) && !(won?(board)))
     return true
   end
 
@@ -83,17 +83,19 @@ def draw?(board)
 end
 
 def over?(board)
-  if (win?(board) && full?(board) && draw?(board))
+  if (won?(board) && full?(board) && draw?(board))
     return true
   end
   return false
 end
 
 def winner(board)
-  winning_coords = win?(board)
+  winning_coords = won?(board)
   if (board[ winning_coords[0] ] == "X")
     return "X"
   else
     return "O"
   end
+
+  return nil
 end
